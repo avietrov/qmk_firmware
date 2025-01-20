@@ -23,16 +23,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define CMD_ENT CMD_T(KC_ENT)
 #define MO3_SPC LT(3, KC_SPC)
 
+#define HOME_S MT(MOD_LGUI, KC_S)
+#define HOME_A MT(MOD_LALT, KC_A)
+#define HOME_E MT(MOD_RGUI, KC_E)
+#define HOME_O MT(MOD_LALT, KC_O)
+
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
        KC_TAB,    KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,                         KC_J,    KC_L,    KC_U,    KC_Y, KC_SCLN, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LCTL,    KC_A,    KC_R,    KC_S,    KC_T,    KC_G,                         KC_M,    KC_N,    KC_E,    KC_I,    KC_O, KC_QUOT,
+      KC_LCTL,  HOME_A,    KC_R,  HOME_S,    KC_T,    KC_G,                         KC_M,    KC_N,  HOME_E,    KC_I,  HOME_O, KC_QUOT,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,                         KC_K,    KC_H, KC_COMM,  KC_DOT, KC_SLSH,  KC_ESC,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LALT,   MO(1),  MO3_SPC,    CMD_ENT,   MO(2), QK_REP
+                                            MO(3),   MO(1),  KC_SPC,     KC_ENT,   MO(2), QK_REP
                                       //`--------------------------'  `--------------------------'
 
   ),
