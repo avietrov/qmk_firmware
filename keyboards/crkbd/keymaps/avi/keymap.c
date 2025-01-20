@@ -84,3 +84,48 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       //`--------------------------'  `--------------------------'
   )
 };
+
+#ifdef OLED_ENABLE
+
+oled_rotation_t oled_init_user(oled_rotation_t rotation) {
+    if (!is_keyboard_master()) {
+        return OLED_ROTATION_180;  // flips the display 180 degrees if offhand
+    }
+
+    return rotation;
+}
+
+static void render_status_my(void) {
+    // Host Keyboard Layer Status
+    oled_write_P(PSTR("Layer: "), false);
+
+    switch (get_highest_layer(layer_state)) {
+        case 0:
+            oled_write_P(PSTR("Default\n"), false);
+            break;
+        case 1:
+            oled_write_P(PSTR("Numbers\n"), false);
+            break;
+        case 2:
+            oled_write_P(PSTR("Symbols\n"), false);
+            break;
+        case 3:
+            oled_write_P(PSTR("Navigation\n"), false);
+            break;
+        default:
+            // Or use the write_ln shortcut over adding '\n' to the end of your string
+            oled_write_ln_P(PSTR("Undefined"), false);
+    }
+}
+
+bool oled_task_user(void) {
+    if (is_keyboard_master()) {
+        render_status_my();
+    } else {
+
+    }
+
+    return false;
+}
+
+#endif
