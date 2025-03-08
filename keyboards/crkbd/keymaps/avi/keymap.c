@@ -27,6 +27,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define HOME_A MT(MOD_LALT, KC_A)
 #define HOME_E MT(MOD_RGUI, KC_E)
 #define HOME_O MT(MOD_LALT, KC_O)
+#define NAV_BACK LGUI(KC_LBRC)
+#define NAV_NEXT LGUI(KC_LBRC)
+#define NAV_DEF LGUI(KC_B)
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -47,11 +50,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
        KC_TAB,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,    KC_9,    KC_0, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LCTL, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, XXXXXXX, XXXXXXX,
+      KC_LCTL, KC_LALT, XXXXXXX, XXXXXXX,NAV_BACK,NAV_NEXT,                      KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_HOME, KC_PGUP, KC_PGDN,  KC_END, XXXXXXX, XXXXXXX,
+      KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, NAV_DEF, XXXXXXX,                      KC_HOME, KC_PGUP, KC_PGDN,  KC_END, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LALT, _______,  KC_SPC,    HPR_ENT,   MO(3), _______
+                                          _______, _______,  KC_SPC,    HPR_ENT,   MO(3), _______
                                       //`--------------------------'  `--------------------------'
   ),
 
