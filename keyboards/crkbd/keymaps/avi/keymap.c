@@ -102,13 +102,13 @@ static void render_status_my(void) {
             oled_write_P(PSTR("Default\n"), false);
             break;
         case 1:
-            oled_write_P(PSTR("Numbers\n"), false);
+            oled_write_P(PSTR("Navigatoin\n"), false);
             break;
         case 2:
             oled_write_P(PSTR("Symbols\n"), false);
             break;
         case 3:
-            oled_write_P(PSTR("Navigation\n"), false);
+            oled_write_P(PSTR("Mouse, F-row\n"), false);
             break;
         default:
             // Or use the write_ln shortcut over adding '\n' to the end of your string
