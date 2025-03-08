@@ -57,11 +57,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [2] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      XXXXXXX, KC_TILD,  KC_DLR, KC_LBRC, KC_RBRC, KC_PERC,                      KC_HASH, KC_AMPR, KC_PLUS, KC_SCLN, KC_ASTR, KC_BSPC,
+      XXXXXXX, KC_TILD,  KC_DLR, KC_PERC, KC_LBRC, KC_RBRC,                      KC_HASH, KC_AMPR, KC_PLUS, KC_SCLN, KC_ASTR, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, KC_LABK, KC_RABK, KC_LPRN, KC_RPRN, KC_QUES,                      KC_UNDS,  KC_EQL, KC_MINS, KC_COLN, KC_EXLM, KC_QUOT,
+      XXXXXXX, KC_LABK, KC_RABK, KC_QUES, KC_LPRN, KC_RPRN,                      KC_UNDS,  KC_EQL, KC_MINS, KC_COLN, KC_EXLM, KC_QUOT,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, XXXXXXX, KC_LCBR, KC_RCBR,   KC_AT,                      XXXXXXX,KC_SLASH, KC_PIPE, KC_BSLS, KC_CIRC,  KC_GRV,
+      XXXXXXX, XXXXXXX, XXXXXXX,   KC_AT, KC_LCBR, KC_RCBR,                      XXXXXXX,KC_SLASH, KC_PIPE, KC_BSLS, KC_CIRC,  KC_GRV,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LALT,   MO(3), MEH_SPC,     KC_ENT, _______, _______
                                       //`--------------------------'  `--------------------------'
