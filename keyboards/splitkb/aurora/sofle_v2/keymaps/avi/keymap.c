@@ -7,6 +7,12 @@ enum layers {
     _SYMBOLS = 1,
     _NAVIGATION = 2,
 };
+
+#define MO_NAV MO(_NAVIGATION)
+#define MO_SYM MO(_SYMBOLS)
+#define GUI_SPC MT(MOD_LGUI, KC_SPC)
+#define OSL_SYM OSL(_SYMBOLS)
+
 // would be good to be able to do cmd space and cmd enter
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_DEFAULT] = LAYOUT(
@@ -14,7 +20,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          KC_TAB,   KC_Q,   KC_W,   KC_F,   KC_P,   KC_B,                          KC_J,   KC_L,    KC_U,   KC_Y,KC_SCLN, KC_BSPC,
         KC_LCTL,   KC_A,   KC_R,   KC_S,   KC_T,   KC_G,                          KC_M,   KC_N,    KC_E,   KC_I,   KC_O, KC_QUOT,
         KC_LSFT,   KC_Z,   KC_X,   KC_C,   KC_D,   KC_V, XXXXXXX,    XXXXXXX,     KC_K,   KC_H, KC_COMM, KC_DOT,KC_SLSH,  KC_ESC,
-                        XXXXXXX,KC_HYPR,KC_LGUI,  MO(2),  KC_SPC,     KC_ENT,    MO(1),KC_LALT,  KC_MEH, XXXXXXX
+                        KC_LGUI,XXXXXXX,KC_LALT,OSL_SYM,  KC_SPC,     KC_ENT,   MO_NAV, KC_MEH, XXXXXXX,OSL_SYM
 
     ),
     [_SYMBOLS] = LAYOUT(
