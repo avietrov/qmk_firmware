@@ -28,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXXXXXX, XXXXXXX,  KC_DLR,  KC_GRV, KC_LCBR, KC_RCBR,                       KC_AMPR, KC_HASH, KC_PLUS, KC_CIRC, KC_SCLN, _______,
         XXXXXXX, XXXXXXX, KC_EXLM, KC_UNDS, KC_LPRN, KC_RPRN,                         KC_AT, KC_MINS, KC_ASTR,  KC_EQL, XXXXXXX, XXXXXXX,
         XXXXXXX, XXXXXXX, KC_BSLS, KC_PIPE, KC_LBRC, KC_RBRC, _______,     _______, KC_TILD, KC_LABK, KC_RABK, KC_PERC, KC_SLSH, _______,
-                          _______, _______, _______, _______, KC_HYPR,      KC_MEH, _______, _______, _______, _______
+                          _______, _______, _______, _______, _______,      KC_MEH, _______, _______, _______, _______
 
     ),
     [_NAVIGATION] = LAYOUT(
@@ -36,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
         KC_LCTL, KC_LALT, KC_LSFT, KC_LGUI, XXXXXXX, XXXXXXX,                       KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, XXXXXXX, XXXXXXX,
         _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,     _______, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, _______,
-                          _______, _______, _______, _______, _______,     _______, _______, _______, _______, _______
+                          _______, _______, _______, _______, KC_HYPR,     _______, _______, _______, _______, _______
 
     )
 };
