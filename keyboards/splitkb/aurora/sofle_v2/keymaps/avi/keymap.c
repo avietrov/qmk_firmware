@@ -1,5 +1,6 @@
 #include "keycodes.h"
 #include "keymap_us.h"
+#include "modifiers.h"
 #include QMK_KEYBOARD_H
 
 enum layers {
@@ -31,7 +32,6 @@ enum layers {
 #define NV_NEXT LCTL(KC_TAB)
 #define NV_PREV LCTL(LSFT(KC_TAB))
 
-#
 
 // would be good to be able to do cmd space and cmd enter
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -40,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          KC_TAB,   KC_Q,   KC_W,   KC_F,   KC_P,   KC_B,                          KC_J,   KC_L,    KC_U,   KC_Y,KC_SCLN, KC_BSPC,
         KC_LCTL,   KC_A,   KC_R,   HR_S,   HR_T,   KC_G,                          KC_M,   HR_N,    HR_E,   KC_I,   KC_O, KC_QUOT,
         KC_LSFT,   KC_Z,   KC_X,   KC_C,   KC_D,   KC_V, XXXXXXX,    XXXXXXX,     KC_K,   KC_H, KC_COMM, KC_DOT,KC_SLSH,  KC_ESC,
-                        XXXXXXX,XXXXXXX,XXXXXXX,OSL_SYM,  KC_SPC,     KC_ENT,   TO_NAV, XXXXXXX, XXXXXXX,OSL_SYM
+                        MOD_MEH,XXXXXXX,XXXXXXX,OSL_SYM,  KC_SPC,     KC_ENT,   TO_NAV, XXXXXXX, XXXXXXX,MOD_HYPR
 
     ),
     [_SYMBOLS] = LAYOUT(
@@ -48,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXXXXXX, XXXXXXX,  KC_DLR,  KC_GRV, KC_LCBR, KC_RCBR,                       KC_AMPR, KC_HASH, KC_PLUS, KC_CIRC, KC_SCLN, _______,
         KC_LCTL, XXXXXXX, KC_EXLM, KC_UNDS, KC_LPRN, KC_RPRN,                         KC_AT, KC_MINS, KC_ASTR,  KC_EQL, XXXXXXX, XXXXXXX,
         XXXXXXX, XXXXXXX, KC_BSLS, KC_PIPE, KC_LBRC, KC_RBRC, _______,     _______, KC_TILD, KC_LABK, KC_RABK, KC_PERC, KC_SLSH, _______,
-                          _______, _______, _______, _______, _______,      KC_MEH, XXXXXXX, _______, _______, _______
+                          _______, _______, _______, _______, _______,     _______, XXXXXXX, _______, _______, _______
 
     ),
     [_NAVIGATION] = LAYOUT(
