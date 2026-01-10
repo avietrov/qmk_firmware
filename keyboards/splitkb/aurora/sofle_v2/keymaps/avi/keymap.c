@@ -36,27 +36,27 @@ enum layers {
 // would be good to be able to do cmd space and cmd enter
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_DEFAULT] = LAYOUT(
-         KC_ESC,   KC_1,   KC_2,   KC_3,   KC_4,   KC_5,                          KC_6,   KC_7,    KC_8,   KC_9,   KC_0,  TO_DEF,
-         KC_TAB,   KC_Q,   KC_W,   KC_F,   KC_P,   KC_B,                          KC_J,   KC_L,    KC_U,   KC_Y,KC_SCLN, KC_BSPC,
-        KC_LCTL,   KC_A,   KC_R,   HR_S,   HR_T,   KC_G,                          KC_M,   HR_N,    HR_E,   KC_I,   KC_O, KC_QUOT,
-        KC_LSFT,   KC_Z,   KC_X,   KC_C,   KC_D,   KC_V, XXXXXXX,    XXXXXXX,     KC_K,   KC_H, KC_COMM, KC_DOT,KC_SLSH,  KC_ESC,
-                        MOD_MEH,XXXXXXX,XXXXXXX,OSL_SYM,  KC_SPC,     KC_ENT,   TO_NAV, XXXXXXX, XXXXXXX,MOD_HYPR
+         KC_ESC,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                          KC_6,    KC_7,    KC_8,    KC_9,    KC_0,  TO_DEF,
+         KC_TAB,    KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,                          KC_J,    KC_L,    KC_U,    KC_Y, KC_SCLN, KC_BSPC,
+        KC_LCTL,    KC_A,    KC_R,    HR_S,    HR_T,    KC_G,                          KC_M,    HR_N,    HR_E,    KC_I,    KC_O, KC_QUOT,
+        KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_D,    KC_V, XXXXXXX,     XXXXXXX,    KC_K,    KC_H, KC_COMM,  KC_DOT, KC_SLSH,  KC_ESC,
+                          MOD_MEH, XXXXXXX, XXXXXXX, OSL_SYM,  KC_SPC,      KC_ENT,  TO_NAV, XXXXXXX, XXXXXXX,MOD_HYPR
 
     ),
     [_SYMBOLS] = LAYOUT(
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  TO_DEF,
-        XXXXXXX, XXXXXXX,  KC_DLR,  KC_GRV, KC_LCBR, KC_RCBR,                       KC_AMPR, KC_HASH, KC_PLUS, KC_CIRC, KC_SCLN, _______,
+         KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  TO_DEF,
+        XXXXXXX, XXXXXXX,  KC_DLR,  KC_GRV, KC_LCBR, KC_RCBR,                       KC_AMPR, KC_HASH, KC_PLUS, KC_CIRC, KC_SCLN, KC_BSPC,
         KC_LCTL, XXXXXXX, KC_EXLM, KC_UNDS, KC_LPRN, KC_RPRN,                         KC_AT, KC_MINS, KC_ASTR,  KC_EQL, XXXXXXX, XXXXXXX,
-        XXXXXXX, XXXXXXX, KC_BSLS, KC_PIPE, KC_LBRC, KC_RBRC, _______,     _______, KC_TILD, KC_LABK, KC_RABK, KC_PERC, KC_SLSH, _______,
-                          _______, _______, _______, _______, _______,     _______, XXXXXXX, _______, _______, _______
+        XXXXXXX, XXXXXXX, KC_BSLS, KC_PIPE, KC_LBRC, KC_RBRC, XXXXXXX,     XXXXXXX, KC_TILD, KC_LABK, KC_RABK, KC_PERC, KC_SLSH, KC_ESC,
+                          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 
     ),
     [_NAVIGATION] = LAYOUT(
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  TO_DEF,
-        XXXXXXX, MS_BTN1,   MS_UP, MS_BTN2, MS_WHLU, XXXXXXX,                       NV_BACK, NV_PREV, NV_NEXT, NV_FRWD, XXXXXXX, _______,
+         KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  TO_DEF,
+        XXXXXXX, MS_BTN1,   MS_UP, MS_BTN2, MS_WHLU, XXXXXXX,                       NV_BACK, NV_PREV, NV_NEXT, NV_FRWD, XXXXXXX, KC_BSPC,
         KC_LCTL, MS_LEFT, MS_DOWN, MS_RGHT, MS_WHLD, XXXXXXX,                       KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, XXXXXXX, XXXXXXX,
-        XXXXXXX, MS_WHLL, XXXXXXX, MS_WHLR, XXXXXXX, XXXXXXX, XXXXXXX,     _______, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, _______,
-                          _______, XXXXXXX, KC_LALT, KC_LSFT, KC_LGUI,     MS_ACL0, MS_ACL1, MS_ACL2, _______, _______
+        XXXXXXX, MS_WHLL, XXXXXXX, MS_WHLR, XXXXXXX, XXXXXXX, XXXXXXX,     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, KC_ESC,
+                          XXXXXXX, XXXXXXX, KC_LALT, KC_LSFT, KC_LGUI,     MS_ACL0, MS_ACL1, MS_ACL2, XXXXXXX, XXXXXXX
 
     )
 };
