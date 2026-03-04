@@ -29,7 +29,7 @@ enum layers {
 #define HR_E MT(MOD_LALT, KC_E)
 
 // custom nav
-#define NV_BACK LGUI(KC_LCBR)
+#define NV_BACK LGUI(KC_LBRC)
 #define NV_FRWD LGUI(KC_RBRC)
 #define NV_NEXT LCTL(KC_TAB)
 #define NV_PREV LCTL(LSFT(KC_TAB))
